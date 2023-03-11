@@ -12,3 +12,7 @@
 - [] Assignment 3
 
 ## Results
+
+* k-Nearest Neighbor cross-validation
+
+[knn cross-validation](./assets/cross-validation-knn.png)
