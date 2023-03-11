@@ -3,7 +3,7 @@
 ## Progress
 
 - [] Assignment 1
-  - [] k-Nearest Neighbor classifier
+  - [x] k-Nearest Neighbor classifier
   - [] Training a Support Vector Machine
   - [] Implement a Softmax classifier
   - [] Two-Layer Neural Network
