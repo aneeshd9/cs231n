@@ -129,13 +129,13 @@ def main():
     dists_no = classifier.compute_distance_no_loops(X_test)
     dists_compare(dists, dists_no)
 
-    two_loop_time = func_time(classifier.compute_distance_two_loops, X_test)
+    two_loop_time, _ = func_time(classifier.compute_distance_two_loops, X_test)
     print(f'Two loop version took {two_loop_time} seconds.')
 
-    one_loop_time = func_time(classifier.compute_distance_one_loop, X_test)
+    one_loop_time, _ = func_time(classifier.compute_distance_one_loop, X_test)
     print(f'One loop version took {one_loop_time} seconds.')
 
-    no_loop_time = func_time(classifier.compute_distance_no_loops, X_test)
+    no_loop_time, _ = func_time(classifier.compute_distance_no_loops, X_test)
     print(f'No loop version took {no_loop_time} seconds.')
 
     best_k = cross_validation(X_train, y_train)
