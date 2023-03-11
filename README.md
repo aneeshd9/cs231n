@@ -4,7 +4,7 @@
 
 - [] Assignment 1
   - [x] k-Nearest Neighbor classifier
-  - [] Training a Support Vector Machine
+  - [x] Training a Support Vector Machine
   - [] Implement a Softmax classifier
   - [] Two-Layer Neural Network
   - [] High Level Representations: Image Features
@@ -15,4 +15,12 @@
 
 * k-Nearest Neighbor cross-validation
 
-![knn cross-validation](./assets/cross-validation-knn.png)
+![knn-cross-validation](./assets/cross-validation-knn.png)
+
+* SVM training loss
+
+![svm-training-loss](./assets/svm-loss.png)
+
+* SVM trained weights visualization
+
+![svm-weights-vis](./assets/svm-weights-vis.png)

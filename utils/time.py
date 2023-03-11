@@ -1,6 +1,6 @@
 def func_time(f, *args):
     import time
     tic = time.time()
-    f(*args)
+    ret = f(*args)
     toc = time.time()
-    return toc - tic
+    return toc - tic, ret
