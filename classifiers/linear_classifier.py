@@ -3,6 +3,7 @@ from abc import ABC, abstractmethod
 import numpy as np
 
 from classifiers.linear_svm import svm_loss_vectorized
+from classifiers.softmax import softmax_loss_vectorized
 
 
 class LinearClassifier(ABC):
@@ -45,7 +46,7 @@ class LinearClassifier(ABC):
     
     @abstractmethod
     def loss(self, X_batch: np.ndarray,
-             y_batch: np.ndarray, reg: float) -> Tuple[float, np.ndarray]:
+             y_batch: np.ndarray, reg: float) -> Tuple[np.float64, np.ndarray]:
         pass
 
 
@@ -53,5 +54,12 @@ class LinearSVM(LinearClassifier):
     def loss(self, X_batch: np.ndarray, y_batch: np.ndarray, reg: float) -> Tuple[np.float64, np.ndarray]:
         if not self.W is None:
             return svm_loss_vectorized(self.W, X_batch, y_batch, reg)
+        else:
+            raise RuntimeError('Weights of the model have not been initialized.')
+
+class Softmax(LinearClassifier):
+    def loss(self, X_batch: np.ndarray, y_batch: np.ndarray, reg: float) -> Tuple[np.float64, np.ndarray]:
+        if not self.W is None:
+            return softmax_loss_vectorized(self.W, X_batch, y_batch, reg)
         else:
             raise RuntimeError('Weights of the model have not been initialized.')
