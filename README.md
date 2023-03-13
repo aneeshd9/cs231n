@@ -9,6 +9,11 @@
   - [x] Two-Layer Neural Network
   - [-] High Level Representations: Image Features (Optional)
 - [] Assignment 2
+  - [] Multi-layer Fully Connected Neural Networks
+  - [] Batch Normalization
+  - [] Dropout
+  - [] Convolutional Neural Networks
+  - [] PyTorch on Cifar-10
 - [] Assignment 3
 
 ## Results
