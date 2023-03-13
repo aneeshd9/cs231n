@@ -2,7 +2,7 @@
 
 ## Progress
 
-- [] Assignment 1
+- [x] Assignment 1
   - [x] k-Nearest Neighbor classifier
   - [x] Training a Support Vector Machine
   - [x] Implement a Softmax classifier
