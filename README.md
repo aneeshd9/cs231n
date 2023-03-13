@@ -6,8 +6,8 @@
   - [x] k-Nearest Neighbor classifier
   - [x] Training a Support Vector Machine
   - [x] Implement a Softmax classifier
-  - [] Two-Layer Neural Network
-  - [] High Level Representations: Image Features
+  - [x] Two-Layer Neural Network
+  - [-] High Level Representations: Image Features (Optional)
 - [] Assignment 2
 - [] Assignment 3
 
@@ -28,3 +28,19 @@
 * Softmax trained weights visualization
 
 ![softmax-weights-vis](./assets/softmax-weights-vis.png)
+
+* Two layer net loss and accuracy without hyperparameter tuning
+
+![tln-init-loss-acc](./assets/tln_init_loss_acc.png)
+
+* Two layer net weights visualization without hyperparameter tuning
+
+![tln-init-weights](./assets/tln_init_weights.png)
+
+* Two layer net tuned loss and accuracy
+
+![tln-fin-loss-acc](./assets/tln-fin-loss-acc.png)
+
+* Two layer net tuned weights visualization
+
+![tln-fin-weights](./assets/tln-fin-weights.png)
