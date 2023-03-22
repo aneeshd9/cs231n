@@ -1,13 +1,13 @@
 import pickle
 from typing import Dict
-from classifiers.fc_net import TwoLayerNet
+from classifiers.fc_net import TwoLayerNet, FullyConnectedNet
 import numpy as np
 import optim
 
 
 class Solver(object):
     def __init__(self,
-                 model: TwoLayerNet,
+                 model: TwoLayerNet | FullyConnectedNet,
                  data: Dict[str, np.ndarray],
                  **kwargs) -> None:
         self.model = model

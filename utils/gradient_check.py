@@ -31,3 +31,32 @@ def grad_check_sparse(f: Callable,
             'numerical: %f analytic: %f, relative error: %e'
             % (grad_numerical, grad_analytic, rel_error)
         )
+
+
+def eval_numerical_gradient(f: Callable,
+                            x: np.ndarray,
+                            verbose: bool=True,
+                            h: float=0.00001) -> np.ndarray:
+    '''
+    a naive implementation of numerical gradient of f at x
+    - f should be a function that takes a single argument
+    - x is the point (numpy array) to evaluate the gradient at
+    '''
+
+    _ = f(x)
+    grad = np.zeros_like(x)
+    it = np.nditer(x, flags=['multi_index'], op_flags=['readwrite']) # pyright: ignore
+    while not it.finished:
+        ix = it.multi_index
+        oldval = x[ix]
+        x[ix] = oldval + h
+        fxph = f(x)
+        x[ix] = oldval - h
+        fxmh = f(x)
+        x[ix] = oldval
+        grad[ix] = (fxph - fxmh) / (2 * h)
+        if verbose:
+            print(ix, grad[ix])
+        it.iternext()
+
+    return grad

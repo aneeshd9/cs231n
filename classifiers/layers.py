@@ -3,7 +3,7 @@ import numpy as np
 
 
 AffineLayerCache = Tuple[np.ndarray, np.ndarray, np.ndarray]
-ReluCache = np.ndarray
+ReluCache = np.ndarray | None
 
 def affine_forward(x: np.ndarray, w: np.ndarray,
                    b: np.ndarray) -> Tuple[np.ndarray,
@@ -17,8 +17,7 @@ def affine_forward(x: np.ndarray, w: np.ndarray,
     out -> [N, M]
     '''
     out = x.reshape(x.shape[0], -1).dot(w) + b
-    cache = (x, w, b)
-    return out, cache
+    cache = (x, w, b) return out, cache
 
 def affine_backward(dout: np.ndarray,
                     cache: AffineLayerCache) -> Tuple[np.ndarray,
